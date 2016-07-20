@@ -3,7 +3,28 @@
 
 public class Solution {
     public boolean isAnagram(String s, String t) {
+    //even better vision
+    	if(s.length()==t.length()){
+		int[] count = new int[26];
+		int check = 0;
+		for(int i = 0; i < s.length(); i ++){
+			if(++count[s.charAt(i)-'a']==1){
+				check++;
+			}
+			if(--count[t.charAt(i)-'a']==0){
+				check--;
+			}	
+		}
+		if(check == 0){
+			return true;
+		}else{
+			return false;
+		}
+	}else{
+		return false;
+	}
     
+    /*
     //O(N)
     	if(s.length()==t.length()){
 		int[] count = new int[26];
@@ -18,7 +39,7 @@ public class Solution {
 	}else{
 		return false;
 	}
-	
+    */	
 	
     /*  SLOW 600+MS
         ArrayList<Character> cArr = new ArrayList<Character>();
