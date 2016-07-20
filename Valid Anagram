@@ -1,0 +1,57 @@
+//242. Valid Anagram
+//https://leetcode.com/problems/valid-anagram/
+
+public class Solution {
+    public boolean isAnagram(String s, String t) {
+    
+    /*  SLOW 600+MS
+        ArrayList<Character> cArr = new ArrayList<Character>();
+		for(int i = 0; i < s.length(); i ++){
+			cArr.add(s.charAt(i));
+		}
+		if(cArr.size()==t.length()){
+			for(int i= 0; i < t.length(); i ++){
+				if(cArr.contains(t.charAt(i))){
+					for(int j = 0; j < cArr.size();j++){
+						if(cArr.get(j)==t.charAt(i)){
+							cArr.remove(j);
+							break;
+						}
+					}
+				}
+				else{
+					return false;
+				}
+			}
+		}else{
+			return false;
+		}
+		return true;
+		*/
+		
+		/*   60MS
+		if(s.length()==t.length()){
+			ArrayList<Character> c1 = new ArrayList<Character>();
+			for(int i = 0; i < s.length(); i ++){
+				c1.add(s.charAt(i));
+			}
+			ArrayList<Character> c2 = new ArrayList<Character>();
+			for(int i = 0; i < t.length(); i ++){
+				c2.add(t.charAt(i));
+			}
+			Collections.sort(c1);
+			Collections.sort(c2);
+			for(int i = 0; i < t.length(); i ++){
+				if(c1.get(i)!=c2.get(i)){
+					return false;
+				}
+			}
+			return true;
+		}else{
+			return false;
+		}
+		*/
+		
+		
+    }
+}
