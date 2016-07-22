@@ -1,6 +1,21 @@
 //217. Contains Duplicate
 //https://leetcode.com/problems/contains-duplicate/
 
+//Accepted
+public class Solution {
+    public boolean containsDuplicate(int[] nums) {
+        HashMap<Integer,Integer> hashMap = new HashMap<Integer,Integer>();  
+		for(int i = 0; i < nums.length; i ++){
+			if(hashMap.containsKey(nums[i])){
+				return true;
+			}else{
+				hashMap.put(nums[i], nums[i]);
+			}
+		}
+		return false;
+    }
+}
+
 //slow!
 public class Solution {
     public boolean containsDuplicate(int[] nums) {
